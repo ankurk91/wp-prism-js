@@ -21,7 +21,7 @@ This plugin lets you control and use this awesome library in to your WordPress s
 - - -
 
 ### Prerequisites
-* php v5.3.0+ or v7.0.x
+* php v5.3.2+ or v7.0.x
 * WordPress v3.8.0 or above
 
 

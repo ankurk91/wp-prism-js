@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Uninstall file for "Ank Prism For WP" Plugin
+ * Uninstall file for this Plugin
  * This file will be used to remove all traces of this plugin when uninstalled
  */
 
