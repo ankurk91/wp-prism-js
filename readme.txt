@@ -1,8 +1,8 @@
 === Prism Syntax Highlighter ===
 Tags: syntax highlighter, prism, light weight, simple, free
 Requires at least: 3.8.0
-Tested up to: 4.5.3
-Stable tag: 1.7.0
+Tested up to: 4.6.0
+Stable tag: 2.0.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 Contributors: ankurk91
@@ -47,26 +47,11 @@ This plugin lets you control and use this awesome library in to your WordPress s
 1. Search for 'ank prism for wp' in WordPress Plugin Directory and Download the .zip file & extract it.
 2. Upload the folder `ank-prism-for-wp` to the `/wp-content/plugins/` directory
 3. Activate the plugin through the 'Plugins List' page in WordPress Admin Area.
-4. Configure this plugin via Settings-->Ank Prism For WP
+4. Configure this plugin via Settings-->Prism For WP
 5. Enjoy the awesomeness.
 
 
 == Frequently Asked Questions ==
-
-= Why did you create this plugin ? =
-
-I could not found a better plugin to use Prism in WP.
-This is my small contribution to the Open Source Community.
-
-= What is the difference between this and other plugins ? =
-
-I have downloaded and tried 3 most downloaded plugins for Prism. One of them force you to use short-code.
-One of theme says that files will be loaded whenever required. One of them force you to use custom fields.
-None of them tried to give same interface like Prismjs.com. My plugin have tried to give same interface like Prismjs.com.
-
-So basically this plugin is just a just a controller. That will allow to select from available languages, theme, plugins.
-Then pack CSS and JS files. Lastly enqueue them to front end. It does not force you to use short-code at all.
-Just follow the instruction from Prismjs.com and you are ready to go.
 
 = What this plugin actually do ? =
 
@@ -80,14 +65,9 @@ Just ahead to http://prismjs.com for demos and instructions.
 
 = Who is the original developer of Prism Library ? =
 
-* This js library is developed by : [Lea Verou](http://lea.verou.me/)
+* This JS library is developed by : [Lea Verou](http://lea.verou.me/)
 * With the many other Contributors : [Listed here](https://github.com/LeaVerou/prism/contributors)
 * Hosted at : [Prismjs.com](http://www.prismjs.com)
-
-= Syntax highlighter not working in my browser :( =
-
-You must have a modern browser to see syntax highlighter working.
-
 
 = Changes does not reflect after saving settings ? =
 
@@ -121,25 +101,21 @@ How to resolve ->
 * Login to your website via your FTP client software. (eg: FileZilla)
   and change file permission of this plugin folder.
 
-= I don't want this plugin to minify output css file =
-
-Ok, please add this code to your wp-config.php
-` define('APFW_MINIFY_CSS', 0);`
 
 = Did you test it with old version of WordPress ? =
 
-No, tested with v4.5+ (latest as of now) only. So i recommend you to upgrade to latest WordPress today.
+No, tested with v4.6.0+ (latest as of now) only. So i recommend you to upgrade to latest WordPress today.
 
 
-= Have u changed anything in Prism source files =
+= Have you changed anything in Prism source files =
 
-Not yet, each and every file is in its original state.
+No, each and every file is in its original state.
 
 
 
 == Upgrade Notice ==
 
-No big changes yet in this plugin, i may add more languages or themes in future.
+Please install v2.0.0 as minimum.
 
 == Screenshots ==
 1. Plugin Option Page Screen
@@ -147,6 +123,10 @@ No big changes yet in this plugin, i may add more languages or themes in future.
 3. Final output on front-end
 
 == Changelog ==
+
+= 2.0.0 =
+* Refactor code a lot
+* Write dynamic files in out folder, so give write permission on out folder from now
 
 = 1.7.0 =
 * Updated links

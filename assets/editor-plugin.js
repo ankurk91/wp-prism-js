@@ -1,4 +1,3 @@
-/*Ank Prism For WP - Tiny MCE Button*/
 (function (window, jQuery) {
     'use strict';
 
@@ -14,11 +13,11 @@
      * Get language list from inline script
      */
     var langs = [];
-    if (typeof apfw_lang !== 'undefined') {
-        langs = apfw_lang;
+    if (typeof prismLangs !== 'undefined') {
+        langs = prismLangs;
     }
-    tinymce.PluginManager.add('afpw_assist_button', function (editor, url) {
-        editor.addButton('afpw_assist_button', {
+    tinymce.PluginManager.add('prism_assist_button', function (editor, url) {
+        editor.addButton('prism_assist_button', {
             title: 'Prism Assistant',
             text: 'Prism',
             type: false,
@@ -66,7 +65,7 @@
                         {
                             type: 'label',
                             name: 'info',
-                            label: 'Please Note: :',
+                            label: 'Note:',
                             text: 'These options works only if enabled on Plugin Option Page.',
                             style: 'font-size:smaller'
                         }

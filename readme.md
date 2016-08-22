@@ -1,4 +1,4 @@
-## Prism JS Plugin For WP
+### Prism Syntax Highlighter Plugin For WordPress
 
 > :warning: This plugin no longer maintained (Bug Fixes Only)
 
@@ -23,7 +23,7 @@ This plugin lets you control and use this awesome library in to your WordPress s
 ### Prerequisites
 * php v5.3.0+ or v7.0.x
 * WordPress v3.8.0 or above
-
+* Write permissions on ```out``` folder
 
 #### Quick Links
 

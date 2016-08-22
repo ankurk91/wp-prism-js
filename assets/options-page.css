@@ -1,0 +1,19 @@
+div.meta-col {
+    width: 32.5%;
+    vertical-align: top;
+    display: inline-block
+}
+
+.hndle {
+    text-align: center;
+    cursor: default !important;
+    background: #fdfdfd;
+    border-bottom-color: #dfdfdf !important;
+}
+
+@media screen and (max-width: 782px) {
+    div.meta-col {
+        width: 99%;
+        display: block
+    }
+}
