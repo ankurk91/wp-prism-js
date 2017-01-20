@@ -2,7 +2,7 @@
 
 > :warning: This plugin no longer maintained (Bug Fixes Only)
 
-Original library developed by - [Lea Verou](http://www.prismjs.com)
+Original library developed by - [Lea Verou](https://github.com/PrismJS/prism)
 
 [![WordPress downloads](https://img.shields.io/wordpress/plugin/dt/ank-prism-for-wp.svg?style=flat-square)](https://wordpress.org/plugins/ank-prism-for-wp)
 [![WordPress compatable](https://img.shields.io/wordpress/v/ank-prism-for-wp.svg?style=flat-square)](https://wordpress.org/plugins/ank-prism-for-wp)

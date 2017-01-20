@@ -110,15 +110,15 @@ class Util
     /**
      * Load view and show it to front-end
      * @param $file string File name without ext
-     * @param $options array Array to be passed to view, not an unused variable
+     * @param $_options array Array to be passed to view, not an unused variable
      * @throws \Exception
      */
-    public function load_view($file, $options = array())
+    public function load_view($file, $_options = array())
     {
         $file_path = $this->path . 'views/' . $file . '.php';
         if (is_readable($file_path)) {
             // Make array keys available as variable on view
-            extract($options);
+            extract($_options);
             require $file_path;
         } else {
             throw new \Exception('Unable to load template file - ' . esc_html($file_path));
