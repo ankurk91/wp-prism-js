@@ -1,4 +1,4 @@
-(function (window, jQuery) {
+(function (window, $) {
     'use strict';
 
     /**
@@ -59,13 +59,13 @@
                             minHeight: 250,
                             value: '',
                             onclick: function (e) {
-                                jQuery(e.target).css('border-color', '');
+                                $(e.target).css('border-color', '');
                             }
                         },
                         {
                             type: 'label',
                             name: 'info',
-                            label: 'Please Note: :',
+                            label: 'Note:',
                             text: 'These options works only if enabled on Plugin Option Page.',
                             style: 'font-size:smaller'
                         }
@@ -78,8 +78,8 @@
                         if (code === '') {
                             /*code is required*/
                             var window_id = this._id;
-                            var inputs = jQuery('#' + window_id + '-body').find('.mce-formitem textarea');
-                            jQuery(inputs.get(0)).css('border-color', 'red').focus();
+                            var inputs = $('#' + window_id + '-body').find('.mce-formitem textarea');
+                            $(inputs.get(0)).css('border-color', 'red').focus();
                             return false;
                         }
                         if (e.data.lineNumbers) {
