@@ -7,6 +7,11 @@
         <?php
         settings_fields(APFW_OPTION_NAME);
         ?>
+        <p style="text-align: center">
+            <button class="button button-primary" type="submit" name="save_apfw_form" value="Save »">Save
+                Settings
+            </button>
+        </p>
         <div id="poststuff">
             <div class="postbox meta-col">
                 <h3 class="hndle"><i class="dashicons-before dashicons-admin-appearance"
@@ -64,18 +69,13 @@
         </div>
         <!--end post stuff-->
         <hr>
-        <p style="text-align: center">
+        <p>
             <input name="<?php echo APFW_OPTION_NAME ?>[onlyOnPost]" id="p_onlyOnPost"
                    type="checkbox" <?php checked($db['onlyOnPost'], 1); ?>>
-            <label for="p_onlyOnPost">Load Prism files (CSS+JS) only to post/single pages</label>&ensp;
+            <label for="p_onlyOnPost">Enqueue Prism files (CSS+JS) only to post/single pages</label>&ensp;
             <input name="<?php echo APFW_OPTION_NAME ?>[noAssistant]" id="p_noAssistant"
                    type="checkbox" <?php checked($db['noAssistant'], 1); ?>>
             <label for="p_noAssistant">Don't show Assistant Button in editor</label>
-        </p>
-        <p style="text-align: center">
-            <button class="button button-primary" type="submit" name="save_apfw_form" value="Save »">Save
-                Settings
-            </button>
         </p>
         <hr>
     </form>
@@ -84,7 +84,7 @@
     View <a target="_blank" href="http://www.prismjs.com">Original Developer Site </a>for Demos |
     Fork on <a target="_blank" href="https://github.com/ankurk91/wp-prism-js">GitHub</a>
     <!--end dev info-->
-    <?php if (defined('WP_DEBUG') && WP_DEBUG == true) {
+    <?php if (WP_DEBUG == true) {
         echo '<hr><p><h5>Showing Debugging Info:</h5><pre>';
         var_dump($db);
         echo '</pre></p><hr>';

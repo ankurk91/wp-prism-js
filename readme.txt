@@ -1,8 +1,8 @@
 === Prism Syntax Highlighter ===
 Tags: syntax highlighter, prism, light weight, simple, free
 Requires at least: 3.8.0
-Tested up to: 4.7.0
-Stable tag: 2.0.1
+Tested up to: 4.6.0
+Stable tag: 2.0.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 Contributors: ankurk91
@@ -126,7 +126,7 @@ Please install v2.0.0 as minimum.
 
 = 2.0.0 =
 * Refactor code a lot
-* Write dynamic files in out folder, so give write permission on out folder from now
+* Write dynamic files in out folder
 
 = 1.7.0 =
 * Updated links
