@@ -1,8 +1,8 @@
 === Prism Syntax Highlighter ===
 Tags: syntax highlighter, prism, light weight, simple, free
 Requires at least: 3.8.0
-Tested up to: 4.6.0
-Stable tag: 2.0.0
+Tested up to: 4.7.3
+Stable tag: 2.1.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 Contributors: ankurk91
@@ -23,9 +23,121 @@ This plugin lets you control and use this awesome library in to your WordPress s
 * Java Script
 * PHP
 * SQL
+* Ruby
+* SQL
+* C
+* ABAP
+* ActionScript
+* Ada
+* Apache Configuration
+* APL
+* Applescript
+* AsciiDoc
+* ASP.NET (C#)
+* AutoIt
+* AutoHotkey
+* Bash
+* BASIC
+* Batch
+* Bison
+* Brainfuck
+* Bro
+* C#
+* C++
+* CoffeeScript
+* Crystal
+* D
+* Dart
+* Diff
+* Django/Jinja2
+* Docker
+* Eiffel
+* Elixir
+* Erlang
+* F#
+* Fortran
+* Gherkin
+* Git
+* GLSL
+* Go
+* GraphQL
+* Groovy
+* Haml
+* Handlebars
+* Haskell
+* Haxe
+* HTTP
+* Icon
+* Inform 7
+* Ini
+* J
+* Jade
+* Java
+* Jolie
+* JSON
+* Julia
+* Keyman
+* Kotlin
+* LaTex
+* Less
+* LiveScript
+* LOLCODE
+* Lua
+* Makefile
+* Markdown
+* MATLAB
+* MEL
+* Mizar
+* Monkey
+* NASM
+* nginx
+* Nim
+* Nix
+* Objective-C
+* OCaml
+* Oz
+* PARI/GP
+* Parser
+* Pascal
+* Perl
+* PowerShell
+* Processing
+* Prolog
+* .properties
+* Protocol Buffers
+* Puppet
+* Pure
+* Python
+* Q
+* Qore
+* R
+* React JSX
+* Reason
+* reST (reStructuredText)
+* Rip
+* Roboconf
+* Rust
+* SAS
+* Sass (Sass)
+* Sass (Scss)
+* Scala
+* Scheme
+* Smalltalk
+* Smarty
+* Stylus
+* Swift
+* Tcl
+* Textile
+* Twig
+* TypeScript
+* Verilog
+* VHDL
+* vim
+* Wiki markup
+* Xojo (REALbasic)
+* YAML
 
-
-= Comes with 7 Official Plugins =
+= Comes with 16 Official Plugins =
 * AutoLinker
 * FileHighlight
 * Line Highlight
@@ -33,6 +145,15 @@ This plugin lets you control and use this awesome library in to your WordPress s
 * Show Invisibles
 * Show Language
 * WebPlatform Docs
+* Autoloader 
+* Command Line
+* Copy to Clipboard
+* Preview: Base
+* Preview: Angle
+* Preview: Color
+* Preview: Easing
+* Preview: Gradient
+* Preview: Time
 
 = Additional Features =
 * Tiny MCE (editor) Assistant Button to quick insert code to posts.
@@ -55,13 +176,13 @@ This plugin lets you control and use this awesome library in to your WordPress s
 
 = What this plugin actually do ? =
 
-This plugin allow you to select from available themes, languages and plugins.
-Then create (pack) JS and CSS files, store them on disk and enqueue them to front end.
-Everything will be served from local server.
+This plugin allows you to select from available themes, languages and plugins.
+Then creates (packs) the JS and CSS files, stores them on disk and enqueues them to front end.
+Everything will be served from the local server.
 
-= Where can i find a working demo ? =
+= Where can I find a working demo ? =
 
-Just ahead to http://prismjs.com for demos and instructions.
+Just head to http://prismjs.com for demos and instructions.
 
 = Who is the original developer of Prism Library ? =
 
@@ -80,7 +201,7 @@ Then flush your WP cache and refresh target page.
 WP Database->wp-options->ank_prism_for_wp.
 Uses a Single Row, stored in array for faster access.
 
-= What if i uninstall/remove this plugin? =
+= What if I uninstall/remove this plugin? =
 
 No worry! It will remove its traces from database upon uninstall.
 
@@ -104,7 +225,7 @@ How to resolve ->
 
 = Did you test it with old version of WordPress ? =
 
-No, tested with v4.6.0+ (latest as of now) only. So i recommend you to upgrade to latest WordPress today.
+No, tested with v4.6.0+ (latest as of now) only. So I recommend you to upgrade to latest WordPress today.
 
 
 = Have you changed anything in Prism source files =
@@ -123,6 +244,13 @@ Please install v2.0.0 as minimum.
 3. Final output on front-end
 
 == Changelog ==
+
+= 2.1.0 = 
+* Added additional languages: 
+* Ruby, SQL, C, ABAP, ActionScript, Ada, Apache Configuration, APL, Applescript, AsciiDoc, ASP.NET (C#), AutoIt, AutoHotkey, Bash, BASIC, Batch, Bison, Brainfuck, Bro, C#, C++, CoffeeScript, Crystal, D, Dart, Diff, Django/Jinja2, Docker, Eiffel, Elixir, Erlang, F#, Fortran, Gherkin, Git, GLSL, Go, GraphQL, Groovy, Haml, Handlebars, Haskell, Haxe, HTTP, Icon, Inform 7, Ini, J, Jade, Java, Jolie, JSON, Julia, Keyman, Kotlin, LaTex, Less, LiveScript, LOLCODE, Lua, Makefile, Markdown, MATLAB, MEL, Mizar, Monkey, NASM, nginx, Nim, Nix, Objective-C, OCaml, Oz, PARI/GP, Parser, Pascal, Perl, PowerShell, Processing, Prolog, .properties, Protocol Buffers, Puppet, Pure, Python, Q, Qore, R, React JSX, Reason, reST (reStructuredText), Rip, Roboconf, Rust, SAS, Sass (Sass), Sass (Scss), Scala, Scheme, Smalltalk, Smarty, Stylus, Swift, Tcl, Textile, Twig, TypeScript, Verilog, VHDL, vim, Wiki markup, Xojo (REALbasic), YAML
+* Added additional plugins:
+* Autoloader , Command Line, Copy to Clipboard, Preview: Base, Preview: Angle, Preview: Color, Preview: Easing, Preview: Gradient, Preview: Time
+* Temporarily removed WebPlatform Docs
 
 = 2.0.0 =
 * Refactor code a lot

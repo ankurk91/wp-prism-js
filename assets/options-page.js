@@ -6,7 +6,7 @@
     };
     var plang = $("#plang-list");
     var plist = plang.find('input:checkbox');
-    plist.change(function () {
+    plist.on('change', function () {       
         if (!$(this).is(":checked")) {
             var tid = $(this).attr('id');
             $(plist).each(function () {

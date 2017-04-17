@@ -95,8 +95,8 @@ class Admin
 
     function add_settings_assets()
     {
-        wp_enqueue_style('prism-admin', plugins_url('/assets/options-page' . '.css', APFW_BASE_FILE), array(), APFW_PLUGIN_VERSION);
-        wp_enqueue_script('prism-admin', plugins_url("/assets/options-page" . ".js", APFW_BASE_FILE), array('jquery'), APFW_PLUGIN_VERSION, true);
+        wp_enqueue_style('prism-admin', plugins_url("/assets/options-page.css", APFW_BASE_FILE), array(), APFW_PLUGIN_VERSION);
+        wp_enqueue_script('prism-admin', plugins_url("/assets/options-page.js", APFW_BASE_FILE), array('jquery'), APFW_PLUGIN_VERSION, true);
     }
 
     function validate_form_post($in)
