@@ -12,7 +12,7 @@ License: GPL2
 /* No direct access*/
 if (!defined('ABSPATH')) exit;
 
-define('APFW_PLUGIN_VERSION', '2.0.0');
+define('APFW_PLUGIN_VERSION', '2.1.0');
 define('APFW_BASE_FILE', __FILE__);
 define('APFW_OPTION_NAME', 'ank_prism_for_wp');
 
