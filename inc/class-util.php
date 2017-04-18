@@ -1,4 +1,5 @@
 <?php
+
 namespace Ankur\Plugins\Prism_For_WP;
 /**
  * Class Util
@@ -13,7 +14,7 @@ class Util
         $this->path = plugin_dir_path(APFW_BASE_FILE);
     }
 
-    function get_theme_list()
+    public function get_theme_list()
     {    //base url for demos
         $base_url = 'http://prismjs.com/index.html?theme=';
         $list = array(
@@ -58,7 +59,7 @@ class Util
         return $list;
     }
 
-    function get_lang_list()
+    public function get_lang_list()
     {
         // Alphabetical order except for dependencies,
         // they must come first. (ex: CSS has to come 

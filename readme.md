@@ -1,6 +1,6 @@
 ### Prism Syntax Highlighter Plugin For WordPress
 
-> 18/04/2017: Updated to the most recent plugins and languages from original repo 
+> 18/04/2017: Updated to the most recent plugins and languages from original repo, thanks to [@thedeviousdev](https://github.com/thedeviousdev) 
 
 Original library developed by - [Lea Verou](https://github.com/PrismJS/prism)
 

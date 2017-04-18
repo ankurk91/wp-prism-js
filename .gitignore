@@ -13,7 +13,7 @@
 .tmproj
 
 # logs and cache
-logs/
+/logs/
 *.log
 npm-debug.log*
 .sass-cache
@@ -37,8 +37,8 @@ $RECYCLE.BIN/
 
 # Folder config file
 [Dd]esktop.ini
-*.DS_store
-.DS_store?
+*.DS_Store
+.DS_Store?
 
 
 # node packages
@@ -53,7 +53,7 @@ bower_components/
 .svn/
 
 # composer
-vendor/
+/vendor/
 composer.phar
 
 # Security tokens

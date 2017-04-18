@@ -1,14 +1,17 @@
 <?php
+
 namespace Ankur\Plugins\Prism_For_WP;
 /*
-Plugin Name: Prism For WP
-Plugin URI: https://github.com/ankurk91/wp-prism-js
-Description: Control and Use the Prism syntax highlighter in your WordPress site.
-Version: 2.1.0
-Author: Ankur Kumar
-Author URI: http://ankurk91.github.io/
-License: GPL2
-*/
+ * Plugin Name: Prism For WP
+ * Plugin URI: https://github.com/ankurk91/wp-prism-js
+ * Description: Control and Use the Prism syntax highlighter in your WordPress site.
+ * Version: 2.1.0
+ * Author: Ankur Kumar
+ * Author URI: http://ankurk91.github.io/
+ * License: MIT
+ * License URI: https://opensource.org/licenses/MIT
+ */
+
 /* No direct access*/
 if (!defined('ABSPATH')) exit;
 

@@ -1,4 +1,5 @@
 <?php
+
 namespace Ankur\Plugins\Prism_For_WP;
 /**
  * Class FrontEnd
@@ -36,11 +37,11 @@ class FrontEnd
         if ($this->check_if_enqueue() == false) return;
         // Enqueue front end css
         if (false == file_exists($this->path . 'out/prism-css.min.css')) {
-            //try to create file
+            // Try to create file
             $this->util->write_file($this->decide_css(), 'prism-css.min.css');
         }
 
-        /* Unique file version, every time the file get modified */
+        // Unique file version, every time the file get modified
         $file_ver = $this->util->get_file_modify_time('prism-css.min.css');
 
         wp_enqueue_style('prism-theme', plugins_url('/out/prism-css.min.css', APFW_BASE_FILE), array(), $file_ver);
@@ -56,7 +57,7 @@ class FrontEnd
             $this->util->write_file($this->decide_js(), 'prism-js.min.js');
         }
 
-        /* Unique file version, every time the file get modified */
+        // Unique file version, every time the file get modified
         $file_ver = $this->util->get_file_modify_time('prism-js.min.js');
         // No dependency + enqueue to footer
         wp_enqueue_script('prism-script', plugins_url('/out/prism-js.min.js', APFW_BASE_FILE), array(), $file_ver, true);
@@ -97,12 +98,13 @@ class FrontEnd
         $plugin_list = $this->util->get_plugin_list();
         // Always include core js file
         $script = file_get_contents($this->path . 'lib/prism-core.min.js');
-        // Include selected langs  js
+
+        // Include selected languages js files
         foreach ($options['lang'] as $lang) {
             $script .= file_get_contents($this->path . 'lib/components/' . $lang_list[$lang]['file'] . '.min.js');
 
         }
-        // Include selected plugin js
+        // Include selected plugin js files
         foreach ($options['plugin'] as $plugin) {
             $script .= file_get_contents($this->path . 'lib/plugins/' . $plugin_list[$plugin]['file'] . '.min.js');
 

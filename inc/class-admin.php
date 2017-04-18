@@ -1,4 +1,5 @@
 <?php
+
 namespace Ankur\Plugins\Prism_For_WP;
 /**
  * Class Admin
@@ -14,7 +15,7 @@ class Admin
      */
     private $util;
 
-    function __construct()
+    public function __construct()
     {
         // Save setting upon plugin activation
         register_activation_hook(plugin_basename(APFW_BASE_FILE), array($this, 'add_default_settings'));
@@ -38,7 +39,7 @@ class Admin
     }
 
 
-    function add_default_settings()
+    public function add_default_settings()
     {
         if (false == get_option(APFW_OPTION_NAME)) {
             add_option(APFW_OPTION_NAME, $this->get_default_options());
@@ -61,13 +62,13 @@ class Admin
     /**
      * Register our settings, using WP settings API
      */
-    function register_plugin_settings()
+    public function register_plugin_settings()
     {
         register_setting(APFW_OPTION_NAME, APFW_OPTION_NAME, array($this, 'validate_form_post'));
     }
 
 
-    function add_to_settings_menu()
+    public function add_to_settings_menu()
     {
         $page_hook_suffix = add_submenu_page('options-general.php', 'Prism For WP', 'Prism For WP', 'manage_options', self::PLUGIN_SLUG, array($this, 'show_options_page'));
 
@@ -79,7 +80,7 @@ class Admin
     }
 
 
-    function add_plugin_actions_links($links)
+    public function add_plugin_actions_links($links)
     {
 
         if (current_user_can('manage_options')) {
@@ -93,13 +94,13 @@ class Admin
         return $links;
     }
 
-    function add_settings_assets()
+    public function add_settings_assets()
     {
         wp_enqueue_style('prism-admin', plugins_url("/assets/options-page.css", APFW_BASE_FILE), array(), APFW_PLUGIN_VERSION);
         wp_enqueue_script('prism-admin', plugins_url("/assets/options-page.js", APFW_BASE_FILE), array('jquery'), APFW_PLUGIN_VERSION, true);
     }
 
-    function validate_form_post($in)
+    public function validate_form_post($in)
     {
         $out = array();
 
@@ -114,7 +115,7 @@ class Admin
             $out['lang'] = $in['lang'];
         } else {
             $out['lang'] = array();
-            add_settings_error(APFW_OPTION_NAME, 'apfw_lang', 'At-least one language must be selected to work');
+            add_settings_error(APFW_OPTION_NAME, 'apfw_lang', 'At-least one language must be selected to work.');
         }
         if (isset($in['plugin'])) {
             $out['plugin'] = $in['plugin'];
@@ -132,7 +133,7 @@ class Admin
         return $out;
     }
 
-    function show_options_page()
+    public function show_options_page()
     {
         if (!current_user_can('manage_options')) {
             wp_die(__('You do not have sufficient permissions to access this page.'));
@@ -140,9 +141,9 @@ class Admin
 
         $this->util->load_view('settings', array(
             'db' => get_option(APFW_OPTION_NAME),
-            'theme_list' => $this->util->get_theme_list(),
-            'lang_list' => $this->util->get_lang_list(),
-            'plugin_list' => $this->util->get_plugin_list()
+            'themeList' => $this->util->get_theme_list(),
+            'langList' => $this->util->get_lang_list(),
+            'pluginList' => $this->util->get_plugin_list()
         ));
     }
 
@@ -156,19 +157,19 @@ class Admin
 
     }
 
-    function register_tinymce_button($buttons)
+    public function register_tinymce_button($buttons)
     {
         array_push($buttons, "prism_assist_button");
         return $buttons;
     }
 
-    function add_tinymce_plugin($plugin_array)
+    public function add_tinymce_plugin($plugin_array)
     {
         $plugin_array['prism_assist_button'] = plugins_url('/assets/editor-plugin.js', APFW_BASE_FILE);
         return $plugin_array;
     }
 
-    function add_admin_inline_script($hook)
+    public function add_admin_inline_script($hook)
     {
         if ($this->check_if_btn_can_be() == true) {
             $lang_list = $this->util->get_lang_list();
@@ -183,18 +184,18 @@ class Admin
         }
     }
 
-    function add_admin_inline_style($hook)
+    public function add_admin_inline_style($hook)
     {
         if ($this->check_if_btn_can_be() == true) {
             ?>
-            <style type="text/css"> .mce-i-apfw-icon:before {
-                    content: '\f499';
-                    font: 400 20px/1 dashicons;
-                    padding: 0;
-                    vertical-align: top;
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-                } </style>
+          <style type="text/css"> .mce-i-apfw-icon:before {
+              content: '\f499';
+              font: 400 20px/1 dashicons;
+              padding: 0;
+              vertical-align: top;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+            } </style>
             <?php
         }
     }
@@ -217,7 +218,7 @@ class Admin
         return false;
     }
 
-    function add_help_menu_tab()
+    public function add_help_menu_tab()
     {
 
         $curr_screen = get_current_screen();
