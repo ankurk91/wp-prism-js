@@ -1,8 +1,8 @@
 === Prism Syntax Highlighter ===
 Tags: syntax highlighter, prism, light weight, simple, free
 Requires at least: 3.8.0
-Tested up to: 4.7.3
-Stable tag: 2.1.0
+Tested up to: 4.7.4
+Stable tag: 3.0.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 Contributors: ankurk91
@@ -232,7 +232,7 @@ No, each and every file is in its original state.
 
 == Upgrade Notice ==
 
-Please install v2.1.0
+Please install v3.0.0
 
 == Screenshots ==
 1. Plugin Option Page Screen
@@ -241,7 +241,7 @@ Please install v2.1.0
 
 == Changelog ==
 
-= 2.1.0 = 
+= 3.0.0 =
 * Added additional languages: 
 * Ruby, SQL, C, ABAP, ActionScript, Ada, Apache Configuration, APL, Applescript, AsciiDoc, ASP.NET (C#), AutoIt, AutoHotkey, Bash, BASIC, Batch, Bison, Brainfuck, Bro, C#, C++, CoffeeScript, Crystal, D, Dart, Diff, Django/Jinja2, Docker, Eiffel, Elixir, Erlang, F#, Fortran, Gherkin, Git, GLSL, Go, GraphQL, Groovy, Haml, Handlebars, Haskell, Haxe, HTTP, Icon, Inform 7, Ini, J, Jade, Java, Jolie, JSON, Julia, Keyman, Kotlin, LaTex, Less, LiveScript, LOLCODE, Lua, Makefile, Markdown, MATLAB, MEL, Mizar, Monkey, NASM, nginx, Nim, Nix, Objective-C, OCaml, Oz, PARI/GP, Parser, Pascal, Perl, PowerShell, Processing, Prolog, .properties, Protocol Buffers, Puppet, Pure, Python, Q, Qore, R, React JSX, Reason, reST (reStructuredText), Rip, Roboconf, Rust, SAS, Sass (Sass), Sass (Scss), Scala, Scheme, Smalltalk, Smarty, Stylus, Swift, Tcl, Textile, Twig, TypeScript, Verilog, VHDL, vim, Wiki markup, Xojo (REALbasic), YAML
 * Added additional plugins:

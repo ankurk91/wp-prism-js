@@ -10,6 +10,8 @@ class FrontEnd
 
     private $db = array();
     private $util;
+
+    // Plugin dir path
     private $path;
 
     public function __construct()
@@ -34,7 +36,7 @@ class FrontEnd
 
     public function add_prism_css()
     {
-        if ($this->check_if_enqueue() == false) return;
+        if ($this->should_enqueue() == false) return;
         // Enqueue front end css
         if (false == file_exists($this->path . 'out/prism-css.min.css')) {
             // Try to create file
@@ -49,7 +51,7 @@ class FrontEnd
 
     public function add_prism_js()
     {
-        if ($this->check_if_enqueue() == false) return;
+        if ($this->should_enqueue() == false) return;
 
         // Enqueue front end js
         if (!file_exists($this->path . 'out/prism-js.min.js')) {
@@ -64,7 +66,7 @@ class FrontEnd
 
     }
 
-    private function check_if_enqueue()
+    private function should_enqueue()
     {
         if ($this->db['onlyOnPost'] == 1) {
             return is_single();
@@ -75,8 +77,8 @@ class FrontEnd
     private function decide_css()
     {
         $options = $this->db;
-        $theme_list = $this->util->get_theme_list();
-        $plugin_list = $this->util->get_plugin_list();
+        $theme_list = $this->util->get_themes_list();
+        $plugin_list = $this->util->get_plugins_list();
 
         $style = file_get_contents($this->path . 'lib/themes/' . $theme_list[intval($options['theme'])]['file'] . '.css');
 
@@ -94,8 +96,8 @@ class FrontEnd
     private function decide_js()
     {
         $options = $this->db;
-        $lang_list = $this->util->get_lang_list();
-        $plugin_list = $this->util->get_plugin_list();
+        $lang_list = $this->util->get_langs_list();
+        $plugin_list = $this->util->get_plugins_list();
         // Always include core js file
         $script = file_get_contents($this->path . 'lib/prism-core.min.js');
 

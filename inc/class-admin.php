@@ -28,8 +28,8 @@ class Admin
         // Register setting
         add_action('admin_init', array($this, 'register_plugin_settings'));
 
-        //Add a button to mce editor
-        //@link: https://www.gavick.com/blog/wordpress-tinymce-custom-buttons/
+        // Add a button to mce editor
+        //@link https://www.gavick.com/blog/wordpress-tinymce-custom-buttons/
         add_action('admin_head', array($this, 'add_editor_button'));
         add_action('admin_print_scripts', array($this, 'add_admin_inline_script'), 10);
         add_action('admin_print_styles', array($this, 'add_admin_inline_style'), 99);
@@ -141,16 +141,16 @@ class Admin
 
         $this->util->load_view('settings', array(
             'db' => get_option(APFW_OPTION_NAME),
-            'themeList' => $this->util->get_theme_list(),
-            'langList' => $this->util->get_lang_list(),
-            'pluginList' => $this->util->get_plugin_list()
+            'themeList' => $this->util->get_themes_list(),
+            'langList' => $this->util->get_langs_list(),
+            'pluginList' => $this->util->get_plugins_list()
         ));
     }
 
 
     public function add_editor_button()
     {
-        if ($this->check_if_btn_can_be() == true) {
+        if ($this->should_add_button() == true) {
             add_filter("mce_external_plugins", array($this, "add_tinymce_plugin"));
             add_filter('mce_buttons', array($this, 'register_tinymce_button'));
         }
@@ -171,8 +171,8 @@ class Admin
 
     public function add_admin_inline_script($hook)
     {
-        if ($this->check_if_btn_can_be() == true) {
-            $lang_list = $this->util->get_lang_list();
+        if ($this->should_add_button() == true) {
+            $lang_list = $this->util->get_langs_list();
             echo "<script type='text/javascript'> /* <![CDATA[ */";
             echo 'var prismLangs=[';
             for ($i = 1; $i <= count($lang_list); $i++) {
@@ -186,7 +186,7 @@ class Admin
 
     public function add_admin_inline_style($hook)
     {
-        if ($this->check_if_btn_can_be() == true) {
+        if ($this->should_add_button() == true) {
             ?>
           <style type="text/css"> .mce-i-apfw-icon:before {
               content: '\f499';
@@ -200,7 +200,7 @@ class Admin
         }
     }
 
-    private function check_if_btn_can_be()
+    private function should_add_button()
     {
         // check for user permissions
         if (!current_user_can('edit_posts') && !current_user_can('edit_pages')) {
@@ -221,9 +221,9 @@ class Admin
     public function add_help_menu_tab()
     {
 
-        $curr_screen = get_current_screen();
+        $currentScreen = get_current_screen();
 
-        $curr_screen->add_help_tab(
+        $currentScreen->add_help_tab(
             array(
                 'id' => 'apfw-overview',
                 'title' => 'Overview',
@@ -236,20 +236,20 @@ class Admin
             )
         );
 
-        $curr_screen->add_help_tab(
+        $currentScreen->add_help_tab(
             array(
                 'id' => 'apfw-troubleshoot',
                 'title' => 'Troubleshoot',
                 'content' => '<p><strong>Things to remember</strong>' .
                     '<ul>' .
                     '<li>If you are using a cache/performance plugin, you need to flush/delete your site cache after  saving settings here.</li>' .
-                    '<li>Only selected languages are available at this time. Stay tuned for more.</li>' .
-                    '<li>Please make sure that plugin\'s folder is writable, because we create new files each time you save settings here.</li>' .
+                    '<li>Please make sure that plugin\'s folder is writable by your web server, because we create new files each time you save settings here.</li>' .
                     '</ul></p>'
 
             )
         );
-        $curr_screen->add_help_tab(
+
+        $currentScreen->add_help_tab(
             array(
                 'id' => 'apfw-more-info',
                 'title' => 'More',
@@ -263,8 +263,8 @@ class Admin
             )
         );
 
-        /* Help sidebar links */
-        $curr_screen->set_help_sidebar(
+        // Help sidebar links
+        $currentScreen->set_help_sidebar(
             '<p><strong>Quick Links</strong></p>' .
             '<p><a href="https://wordpress.org/ank-prism-for-wp/faq/" target="_blank">Plugin FAQ</a></p>' .
             '<p><a href="https://github.com/ankurk91/wp-prism-js" target="_blank">Plugin Home</a></p>'

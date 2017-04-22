@@ -7,6 +7,7 @@ namespace Ankur\Plugins\Prism_For_WP;
  */
 class Util
 {
+    // Plugin dir path
     private $path;
 
     public function __construct()
@@ -14,52 +15,56 @@ class Util
         $this->path = plugin_dir_path(APFW_BASE_FILE);
     }
 
-    public function get_theme_list()
-    {    //base url for demos
-        $base_url = 'http://prismjs.com/index.html?theme=';
+    public function get_themes_list()
+    {
+        // Base url for demos
+        $baseUrl = 'http://prismjs.com/index.html?theme=';
+
         $list = array(
-            1 => array('name' => 'Default', 'url' => $base_url . 'prism', 'file' => 'prism'),
-            2 => array('name' => 'Coy', 'url' => $base_url . 'prism-coy', 'file' => 'prism-coy'),
-            3 => array('name' => 'Dark', 'url' => $base_url . 'prism-dark', 'file' => 'prism-dark'),
-            4 => array('name' => 'Okaidia', 'url' => $base_url . 'prism-okaidia', 'file' => 'prism-okaidia'),
-            5 => array('name' => 'Tomorrow', 'url' => $base_url . 'prism-tomorrow', 'file' => 'prism-tomorrow'),
-            6 => array('name' => 'Twilight', 'url' => $base_url . 'prism-twilight', 'file' => 'prism-twilight'),
+            1 => array('name' => 'Default', 'url' => $baseUrl . 'prism', 'file' => 'prism'),
+            2 => array('name' => 'Coy', 'url' => $baseUrl . 'prism-coy', 'file' => 'prism-coy'),
+            3 => array('name' => 'Dark', 'url' => $baseUrl . 'prism-dark', 'file' => 'prism-dark'),
+            4 => array('name' => 'Okaidia', 'url' => $baseUrl . 'prism-okaidia', 'file' => 'prism-okaidia'),
+            5 => array('name' => 'Tomorrow', 'url' => $baseUrl . 'prism-tomorrow', 'file' => 'prism-tomorrow'),
+            6 => array('name' => 'Twilight', 'url' => $baseUrl . 'prism-twilight', 'file' => 'prism-twilight'),
 
         );
         return $list;
     }
 
-    function get_plugin_list()
-    {   //$base_url, lets not repeat code ,since domains are subject to change
-        $base_url = 'http://prismjs.com/plugins/';
-        //JS and related CSS file name must be same, except extension
+    public function get_plugins_list()
+    {
+        // lets not repeat code ,since domains are subject to change
+        $baseUrl = 'http://prismjs.com/plugins/';
+
+        // JS and related CSS file name must be same, except extension
         $list = array(
-            1 => array('name' => 'Autolinker ', 'url' => $base_url . 'autolinker/', 'file' => 'prism-autolinker', 'need_css' => 1),
-            2 => array('name' => 'Autoloader ', 'url' => $base_url . 'autoloader/', 'file' => 'prism-autoloader', 'need_css' => 0),
+            1 => array('name' => 'Autolinker ', 'url' => $baseUrl . 'autolinker/', 'file' => 'prism-autolinker', 'need_css' => 1),
+            2 => array('name' => 'Autoloader ', 'url' => $baseUrl . 'autoloader/', 'file' => 'prism-autoloader', 'need_css' => 0),
 
-            3 => array('name' => 'Command Line', 'url' => $base_url . 'command-line/', 'file' => 'prism-command-line', 'need_css' => 1),
-            4 => array('name' => 'Copy to Clipboard', 'url' => $base_url . 'copy-to-clipboard/', 'file' => 'prism-copy-to-clipboard', 'need_css' => 1),
+            3 => array('name' => 'Command Line', 'url' => $baseUrl . 'command-line/', 'file' => 'prism-command-line', 'need_css' => 1),
+            4 => array('name' => 'Copy to Clipboard', 'url' => $baseUrl . 'copy-to-clipboard/', 'file' => 'prism-copy-to-clipboard', 'need_css' => 1),
 
-            5 => array('name' => 'File Highlight ', 'url' => $base_url . 'file-highlight/', 'file' => 'prism-file-highlight', 'need_css' => 0),
-            6 => array('name' => 'Line Highlight', 'url' => $base_url . 'line-highlight/', 'file' => 'prism-line-highlight', 'need_css' => 1),
-            7 => array('name' => 'Line Numbers', 'url' => $base_url . 'line-numbers/', 'file' => 'prism-line-numbers', 'need_css' => 1),
+            5 => array('name' => 'File Highlight ', 'url' => $baseUrl . 'file-highlight/', 'file' => 'prism-file-highlight', 'need_css' => 0),
+            6 => array('name' => 'Line Highlight', 'url' => $baseUrl . 'line-highlight/', 'file' => 'prism-line-highlight', 'need_css' => 1),
+            7 => array('name' => 'Line Numbers', 'url' => $baseUrl . 'line-numbers/', 'file' => 'prism-line-numbers', 'need_css' => 1),
 
-            8 => array('name' => 'Preview: Base', 'url' => $base_url . 'previewer-base/', 'file' => 'prism-previewer-base', 'need_css' => 1),
-            9 => array('name' => 'Preview: Angle', 'url' => $base_url . 'previewer-angle/', 'file' => 'prism-previewer-angle', 'need_css' => 1),
-            10 => array('name' => 'Preview: Color', 'url' => $base_url . 'previewer-color/', 'file' => 'prism-previewer-color', 'need_css' => 1),
-            11 => array('name' => 'Preview: Easing', 'url' => $base_url . 'previewer-easing/', 'file' => 'prism-previewer-easing', 'need_css' => 1),
-            12 => array('name' => 'Preview: Gradient', 'url' => $base_url . 'previewer-gradient/', 'file' => 'prism-previewer-gradient', 'need_css' => 1),
-            13 => array('name' => 'Preview: Time', 'url' => $base_url . 'previewer-time/', 'file' => 'prism-previewer-time', 'need_css' => 1),
+            8 => array('name' => 'Preview: Base', 'url' => $baseUrl . 'previewer-base/', 'file' => 'prism-previewer-base', 'need_css' => 1),
+            9 => array('name' => 'Preview: Angle', 'url' => $baseUrl . 'previewer-angle/', 'file' => 'prism-previewer-angle', 'need_css' => 1),
+            10 => array('name' => 'Preview: Color', 'url' => $baseUrl . 'previewer-color/', 'file' => 'prism-previewer-color', 'need_css' => 1),
+            11 => array('name' => 'Preview: Easing', 'url' => $baseUrl . 'previewer-easing/', 'file' => 'prism-previewer-easing', 'need_css' => 1),
+            12 => array('name' => 'Preview: Gradient', 'url' => $baseUrl . 'previewer-gradient/', 'file' => 'prism-previewer-gradient', 'need_css' => 1),
+            13 => array('name' => 'Preview: Time', 'url' => $baseUrl . 'previewer-time/', 'file' => 'prism-previewer-time', 'need_css' => 1),
 
-            14 => array('name' => 'Show Invisibles', 'url' => $base_url . 'show-invisibles/', 'file' => 'prism-show-invisibles', 'need_css' => 1),
-            15 => array('name' => 'Show Language', 'url' => $base_url . 'show-language/', 'file' => 'prism-show-language', 'need_css' => 1),
+            14 => array('name' => 'Show Invisibles', 'url' => $baseUrl . 'show-invisibles/', 'file' => 'prism-show-invisibles', 'need_css' => 1),
+            15 => array('name' => 'Show Language', 'url' => $baseUrl . 'show-language/', 'file' => 'prism-show-language', 'need_css' => 1),
             // Docs not correctly linking
             // 16 => array('name' => 'WebPlatform Docs', 'url' => $base_url . 'wpd/', 'file' => 'prism-wpd', 'need_css' => 1),
         );
         return $list;
     }
 
-    public function get_lang_list()
+    public function get_langs_list()
     {
         // Alphabetical order except for dependencies,
         // they must come first. (ex: CSS has to come 
@@ -231,11 +236,11 @@ class Util
 
     public function minify_css($buffer)
     {
-        /* remove comments */
+        // Remove comments
         $buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
-        /* remove tabs, spaces, newlines, etc. */
+        // Remove tabs, spaces, newlines, etc.
         $buffer = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '     '), '', $buffer);
-        /* remove other spaces before/after ; */
+        // Remove other spaces before/after ;
         $buffer = preg_replace(array('(( )+{)', '({( )+)'), '{', $buffer);
         $buffer = preg_replace(array('(( )+})', '(}( )+)', '(;( )*})'), '}', $buffer);
         $buffer = preg_replace(array('(;( )+)', '(( )+;)'), ';', $buffer);
