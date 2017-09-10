@@ -144,7 +144,7 @@ This plugin lets you control and use this awesome library in to your WordPress s
 * Line Numbers
 * Show Invisibles
 * Show Language
-* Normalized Whitespace
+* Normalize Whitespace
 * Autoloader 
 * Command Line
 * Copy to Clipboard
@@ -242,7 +242,7 @@ Please install v3.0.1
 == Changelog ==
 
 = 3.0.1 =
-* Added plugin: Normalized Whitespace
+* Added plugin: Normalize Whitespace
 
 = 3.0.0 =
 * Added additional languages: 
