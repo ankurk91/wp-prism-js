@@ -2,7 +2,7 @@
 Tags: syntax highlighter, prism, light weight, simple, free
 Requires at least: 3.8.0
 Tested up to: 4.7.4
-Stable tag: 3.0.0
+Stable tag: 3.0.1
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 Contributors: ankurk91
@@ -144,7 +144,7 @@ This plugin lets you control and use this awesome library in to your WordPress s
 * Line Numbers
 * Show Invisibles
 * Show Language
-* WebPlatform Docs
+* Normalize Whitespace
 * Autoloader 
 * Command Line
 * Copy to Clipboard
@@ -232,7 +232,7 @@ No, each and every file is in its original state.
 
 == Upgrade Notice ==
 
-Please install v3.0.0
+Please install v3.0.1
 
 == Screenshots ==
 1. Plugin Option Page Screen
@@ -240,6 +240,9 @@ Please install v3.0.0
 3. Final output on front-end
 
 == Changelog ==
+
+= 3.0.1 =
+* Added plugin: Normalize Whitespace
 
 = 3.0.0 =
 * Added additional languages: 
