@@ -1,7 +1,7 @@
 === Prism Syntax Highlighter ===
 Tags: syntax highlighter, prism, light weight, simple, free
 Requires at least: 3.8.0
-Tested up to: 4.7.4
+Tested up to: 4.8.2
 Stable tag: 3.0.1
 License: MIT
 License URI: https://opensource.org/licenses/MIT
@@ -221,8 +221,7 @@ How to resolve ->
 
 = Did you test it older versions of WordPress ? =
 
-It works with v4.6.0+ onwards. Most recent update allows it to work with 4.7.3.
-
+No, i only test it with latest version. But it should work with older versions without any problem as well.
 
 = Have you changed anything in Prism source files =
 
