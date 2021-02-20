@@ -1,8 +1,9 @@
 === Prism Syntax Highlighter ===
 Tags: syntax highlighter, prism, light weight, simple, free
-Requires at least: 3.8.0
-Tested up to: 4.8.2
-Stable tag: 3.0.1
+Requires at least: 5.0.0
+Requires PHP: 5.6
+Tested up to: 5.6.1
+Stable tag: 3.0.2
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 Contributors: ankurk91
@@ -192,16 +193,6 @@ Are you using some Cache/Performance plugin (eg:WP Super Cache/W3 Total Cache/BW
 
 Then flush your WP cache and refresh target page.
 
-= Where does it store settings and options ? =
-
-WP Database->wp-options->ank_prism_for_wp.
-Uses a Single Row, stored in an array for faster access.
-
-= What if I uninstall/remove this plugin? =
-
-No worries! It will remove all traces from the database upon uninstall.
-
-
 = This Plugin is unable to write js/css files . =
 
 Each time update the settings, the plugin will create new js and CSS files.
@@ -219,19 +210,8 @@ How to resolve ->
   and change file permission of this plugin folder.
 
 
-= Did you test it older versions of WordPress ? =
-
-No, i only test it with latest version. But it should work with older versions without any problem as well.
-
-= Have you changed anything in Prism source files =
-
-No, each and every file is in its original state.
-
-
-
 == Upgrade Notice ==
 
-Please install v3.0.1
 
 == Screenshots ==
 1. Plugin Option Page Screen
@@ -239,6 +219,9 @@ Please install v3.0.1
 3. Final output on front-end
 
 == Changelog ==
+
+= 3.0.2 =
+* Tested with php 7.4 and WordPress 5.6
 
 = 3.0.1 =
 * Added plugin: Normalize Whitespace

@@ -74,7 +74,7 @@
     <hr>
   </form>
   <p class="dev-info">
-    Created with &hearts; by <a target="_blank" href="https://ankurk91.github.io/"> Ankur Kumar</a> |
+    Created with &hearts; by <a target="_blank" href="https://twitter.com/ankurk91"> Ankur Kumar</a> |
     View <a target="_blank" href="http://www.prismjs.com">Original Developer Site </a>for Demos |
     Fork on <a target="_blank" href="https://github.com/ankurk91/wp-prism-js">GitHub</a>
   </p>
